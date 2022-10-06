@@ -1,12 +1,12 @@
 import axios from "axios";
-import { baseURL } from "constants/endpoints";
+import { baseURL } from "../constants/endpoints";
 import {
   getAccessToken,
   isAuthenticated,
   ACCESS_TOKEN,
   CLIENT,
   UID
-} from "../lib/contexts/auth";
+} from "../context/auth";
 
 const api = axios.create({
   baseURL,
