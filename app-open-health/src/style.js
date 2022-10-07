@@ -1,3 +1,5 @@
+import OpenHealthLogo from "./assets/img/openHealthLogo.png";
+
 export const style = {
   api: {
     apiProduction: "https://homolog.api.appnoz.com.br/",
@@ -8,15 +10,13 @@ export const style = {
   },
 
   icons: {
-    loginIcon: "https://timcoo-geral.s3.amazonaws.com/Logos/noz.png",
-    menuIcon:
-      localStorage.getItem("menuIcon") ||
-      "https://timcoo-geral.s3.amazonaws.com/Logos/secondary_logo_noz.png",
-    browserLogo: "https://timcoo-geral.s3.amazonaws.com/Logos/noz.png"
+    loginIcon: OpenHealthLogo,
+    menuIcon: OpenHealthLogo,
+    browserLogo: OpenHealthLogo
   },
 
   shareAttributes: {
-    shareImage: "https://timcoo-geral.s3.amazonaws.com/Logos/noz.png",
+    shareImage: OpenHealthLogo,
     shareTitle: "Noz - Plataforma de comunicação",
     shareDescription:
       "O NOZ é um aplicativo de comunicação personalizado, onde é possível criar conteúdos de acordo com a segmentação do seu público de maneira gamificada."
@@ -33,8 +33,8 @@ export const style = {
   },
 
   colors: {
-    primaryColor: localStorage.getItem("primaryColor") || "#007bff",
-    secondaryColor: localStorage.getItem("secondaryColor") || "#2e63fb",
+    primaryColor: localStorage.getItem("primaryColor") || "#501f99",
+    secondaryColor: localStorage.getItem("secondaryColor") || "#b3247c",
     tertiaryColor: ""
   },
 
