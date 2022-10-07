@@ -4,14 +4,14 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 // import Login from "../../pages/Login/Login.js";
 // import Home from "../../pages/Home/Home";
 // import RoutesPrivate from "./Private/private";
-import App from "../pages/Home/App";
+import Login from "../pages/Home/Login";
 // import Empresas from "../../pages/Empresas/Empresas";
 
 const Routes = () =>
   <BrowserRouter>
     <Suspense fallback={<div />}>
       <Switch>
-        <Route exact path="/" component={App} />
+        <Route exact path="/" component={Login} />
       </Switch>
     </Suspense>
   </BrowserRouter>;
