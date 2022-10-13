@@ -20,7 +20,7 @@ const Login = () => {
   // const { isLoading } = useSelector(state => state.auth);
 
   const handleLogin = async event => {
-    console.log("it works! ");
+    console.log(email, password);
     // event.preventDefault();
     // let recaptchaSuccess = undefined;
 
