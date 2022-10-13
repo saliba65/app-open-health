@@ -5,7 +5,7 @@ export const style = {
     apiProduction: "https://homolog.api.appnoz.com.br/",
     newApiProduction: "null",
     samlUrl: null,
-    nameProfile: "sample",
+    nameProfile: "openHealth",
     hostHeader: "null"
   },
 
@@ -17,16 +17,15 @@ export const style = {
 
   shareAttributes: {
     shareImage: OpenHealthLogo,
-    shareTitle: "Noz - Plataforma de comunicação",
-    shareDescription:
-      "O NOZ é um aplicativo de comunicação personalizado, onde é possível criar conteúdos de acordo com a segmentação do seu público de maneira gamificada."
+    shareTitle: "Open Health App",
+    shareDescription: "Open Health App description"
   },
 
   names: {
-    nameApp: localStorage.getItem("nameApp") || "sample",
-    nameScore: "Nozes",
-    nameStore: "Sample Store",
-    nameAcademy: localStorage.getItem("nameAcademy") || "Sample Academy",
+    nameApp: localStorage.getItem("nameApp") || "openHealth",
+    nameScore: "Coins",
+    nameStore: "openHealth Store",
+    nameAcademy: localStorage.getItem("nameAcademy") || "openHealth Academy",
     nameTeam: localStorage.getItem("nameTeam") || "Time",
     nameCalendar: localStorage.getItem("nameCalendar") || "Calendário",
     nameTools: localStorage.getItem("nameTools") || "Ferramentas"
