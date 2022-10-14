@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
 import * as S from "./LoginStyle";
 import urls from "../../constants/urls";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -10,32 +12,41 @@ import Button from "../../components/core/Button/Button";
 import { ReactComponent as ArrowLeftIcon } from "../../assets/icons/arrow-left.svg";
 import { ReactComponent as SvgLogo } from "../../assets/img/Logo.svg";
 import { createBrowserHistory } from "history";
+import { AuthActions } from "../../store/auth/auth.ducks";
 
 const Login = () => {
   const history = createBrowserHistory();
   const intl = useIntl();
+  const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const rememberMe = localStorage.getItem("rememberMe");
+  const handleSignIn = values => dispatch(AuthActions.signIn(values));
   // const { isLoading } = useSelector(state => state.auth);
+
+  const signInValidator = ({ email, password }) => {
+    console.log(email, password);
+    if (email === "testeapple@openhealth.com.br" && password.length >= 8) {
+      return true;
+    }
+    return false;
+  };
 
   const handleLogin = async event => {
     console.log(email, password);
-    // event.preventDefault();
-    // let recaptchaSuccess = undefined;
+    event.preventDefault();
 
-    // if (style.names.nameApp === "Pintou Parceria Suvinil") {
-    //   const token = await getToken();
+    const isValid = signInValidator(email, password);
 
-    //   const { success: responseSucces } = await validateRecaptcha(token);
-
-    //   recaptchaSuccess = responseSucces;
-    // } else {
-    //   recaptchaSuccess = true;
-    // }
-    // dispatch(
-    //   AuthActions.userAuthRequest({ email, password, recaptchaSuccess })
-    // );
+    if (isValid) {
+      handleSignIn({ email: email, password: password });
+      setEmail("");
+      setPassword("");
+    } else {
+      console.log("senha invalida");
+      setEmail("");
+      setPassword("");
+    }
   };
 
   useEffect(() => {
