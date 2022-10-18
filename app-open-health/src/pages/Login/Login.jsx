@@ -9,7 +9,6 @@ import Flex from "../../components/core/Grid/Flex";
 import { Input, CheckBox } from "../../components/core/Form/Form";
 import Button from "../../components/core/Button/Button";
 
-import { ReactComponent as ArrowLeftIcon } from "../../assets/icons/arrow-left.svg";
 import { ReactComponent as SvgLogo } from "../../assets/img/Logo.svg";
 import { createBrowserHistory } from "history";
 import { AuthActions } from "../../store/auth/auth.ducks";
@@ -24,29 +23,13 @@ const Login = () => {
   const handleSignIn = values => dispatch(AuthActions.signIn(values));
   // const { isLoading } = useSelector(state => state.auth);
 
-  const signInValidator = ({ email, password }) => {
-    console.log(email, password);
-    if (email === "testeapple@openhealth.com.br" && password.length >= 8) {
-      return true;
-    }
-    return false;
-  };
-
   const handleLogin = async event => {
     console.log(email, password);
     event.preventDefault();
 
-    const isValid = signInValidator(email, password);
-
-    if (isValid) {
-      handleSignIn({ email: email, password: password });
-      setEmail("");
-      setPassword("");
-    } else {
-      console.log("senha invalida");
-      setEmail("");
-      setPassword("");
-    }
+    handleSignIn({ email: email, password: password });
+    setEmail("");
+    setPassword("");
   };
 
   useEffect(() => {
@@ -56,11 +39,6 @@ const Login = () => {
 
   return (
     <S.LoginContainer>
-      <S.ContainerArrowLeft
-        showArrowLeft={history.location.pathname === urls.ROUTES.SIGNUP}
-      >
-        <ArrowLeftIcon onClick={() => history.push(urls.ROUTES.LOGIN)} />
-      </S.ContainerArrowLeft>
       <S.LogoCompany>
         {style.icons.loginIcon
           ? <img src={style.icons.loginIcon} alt="" />
@@ -88,10 +66,7 @@ const Login = () => {
             onChange={e => setPassword(e.target.value)}
           />
           <S.BoxForgetPassword>
-            <a
-              href="#!"
-              onClick={() => history.push(urls.ROUTES.FORGET_PASSWORD)}
-            >
+            <a href="#!" onClick={() => history.push(urls.ROUTES.LOGIN)}>
               <FormattedMessage id="login.textPage.forgotPassword" />
             </a>
           </S.BoxForgetPassword>

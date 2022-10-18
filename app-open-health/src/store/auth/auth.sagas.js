@@ -3,27 +3,32 @@ import { SIGN_IN } from "../../constants/endpoints";
 import { POST } from "../../constants/verbs";
 import { setAccessToken } from "../../context/auth";
 import api from "../../services/api";
-//import { search } from "../enterprises/enterprises.sagas";
+import urls from "../../constants/urls";
 import { AuthActions, AuthTypes } from "./auth.ducks";
-//import { useHistory } from "react-router-dom";
+import { history } from "../../utils/routes";
 
 export function* signIn({ payload, type }) {
   try {
-    const response = yield api({
-      method: POST,
-      url: SIGN_IN,
-      data: payload
-    });
+    if (
+      payload.email === "teste@openhealth.com.br" &&
+      payload.password === "tiosukita"
+    ) {
+      yield call(setAccessToken, {
+        accessToken: "nqp1B3tdgwwZHT2A7byf",
+        client: "bumymcQ-nCboy6Wcbfbp",
+        uid: payload.email
+      });
 
-    console.log(response.headers);
-
-    yield call(setAccessToken, {
-      accessToken: response.headers["access-token"],
-      client: response.headers.client,
-      uid: response.headers.uid
-    });
-
-    yield put(AuthActions.signInSuccess(response.data.investor));
+      yield put(
+        AuthActions.signInSuccess({
+          user: payload.email,
+          isAuthenticated: true
+        })
+      );
+      window.location.assign(urls.ROUTES.MURAL);
+    } else {
+      console.log("Email ou senha inválidos");
+    }
   } catch (error) {
     console.error(error);
 
