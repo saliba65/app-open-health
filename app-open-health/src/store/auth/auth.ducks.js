@@ -5,7 +5,6 @@ import {
   REQUEST_REJECTED,
   REQUEST_RESOLVED
 } from "../../constants/request";
-//Criando actions types & creators
 
 export const { Types: AuthTypes, Creators: AuthActions } = createActions({
   signIn: ["payload"],
@@ -13,11 +12,6 @@ export const { Types: AuthTypes, Creators: AuthActions } = createActions({
   authRequestSuccess: ["originalType"],
   authRequestFailure: ["error", "originalType"]
 });
-
-//console.log(Types)
-//console.log(Creators)
-
-//Criando os Reducer Handlers
 
 const INITIAL_STATE = {
   user: null,
@@ -62,8 +56,6 @@ const authRequestFailure = (state, { error: { response }, originalType }) => ({
     [originalType]: REQUEST_REJECTED
   }
 });
-
-//Criando Reducer
 
 export default createReducer(INITIAL_STATE, {
   [AuthTypes.SIGN_IN]: signIn,

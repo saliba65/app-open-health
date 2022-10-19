@@ -1,11 +1,7 @@
 import { call, put, takeLatest } from "redux-saga/effects";
-import { SIGN_IN } from "../../constants/endpoints";
-import { POST } from "../../constants/verbs";
 import { setAccessToken } from "../../context/auth";
-import api from "../../services/api";
 import urls from "../../constants/urls";
 import { AuthActions, AuthTypes } from "./auth.ducks";
-import { history } from "../../utils/routes";
 
 export function* signIn({ payload, type }) {
   try {
@@ -27,6 +23,7 @@ export function* signIn({ payload, type }) {
       );
       window.location.assign(urls.ROUTES.MURAL);
     } else {
+      window.location.reload(urls.ROUTES.LOGIN);
       console.log("Email ou senha inválidos");
     }
   } catch (error) {

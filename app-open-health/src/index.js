@@ -3,7 +3,6 @@ import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 import { store } from "./store/index";
 import { ThemeProvider } from "styled-components";
-import AlertModal from "./components/core/AlertModal/AlertModal";
 import GlobalStyles from "./styles/global";
 import Routes from "./routes/routes";
 import { IntlProvider } from "react-intl";
@@ -20,7 +19,6 @@ root.render(
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Routes />
-        {/* <AlertModal /> */}
       </ThemeProvider>
     </Provider>
   </IntlProvider>,
