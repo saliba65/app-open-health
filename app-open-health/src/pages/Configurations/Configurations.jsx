@@ -10,7 +10,6 @@ import { Switch } from "../../components/core/Form/Form";
 import { PageTitle } from "../../components/core/Typography/Typography";
 
 import Avatar from "../../components/core/Avatar/Avatar";
-import profile_image from "../../assets/img/lucas_saliba.png"
 import * as S from "./ConfigurationsStyle";
 
 const Configurations = () => {
