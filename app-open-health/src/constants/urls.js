@@ -134,3 +134,74 @@ const urls = {
 };
 
 export default urls;
+
+export const urlsFunction = (() => ({
+  ROUTES_MENU: {
+    MURAL: {
+      id: 0,
+      patch: "/",
+      nameIcon: "Home",
+      showMenu: true,
+      name: "mural"
+    },
+    ABOUT_US: {
+      id: 1,
+      patch: "/sobre-nos",
+      nameIcon: "AboutUs",
+      showMenu: true,
+      name: "aboutUs"
+    },
+    CALENDAR: {
+      id: 2,
+      patch: "/calendario",
+      nameIcon: "EventsIcons",
+      showMenu: true,
+      name: "calendar"
+    },
+    FILES: {
+      id: 3,
+      patch: "/exames",
+      nameIcon: "ExamesIcons",
+      showMenu: true,
+      name: "arquives"
+    },
+    CONFIGURATIONS: {
+      id: 4,
+      patch: "/configuracoes",
+      nameIcon: "ConfigurationsIcons",
+      showMenu: true,
+      name: "settings"
+    }
+  },
+  ROUTES: {
+    LOGIN: "/login",
+    MURAL: "/",
+    FAVORITE: "/favoritos",
+    MY_NOTIFICATIONS: "/minhas-notificacoes",
+    DETAILS_PRODUCT: "/produto",
+    LOGOUT: "/logout",
+    FILES: "/exames",
+    STORE: "/loja",
+    TEAM: "/time",
+    BIRTHDAYS: "/aniversarios",
+    BIRTHDAYS_TODAY: "/aniversariantes",
+    CALENDAR: "/calendario",
+    PROFILE: "/perfil",
+    EDIT_PROFILE: "/editar-perfil",
+    ACADEMY: "/academy",
+    SCORE_HISTORY: "/historico-de-pontuacao",
+    FORGET_PASSWORD: "/esqueci-a-senha",
+    DETAILS_PUBLICATION: "/detalhes-publicacao",
+    CONFIGURATIONS: "/configuracoes",
+    APPS: "/ferramentas",
+    SIGNUP: "/cadastroSuvinil",
+    DETAILS_GALLERY: "/galeria",
+    GROUP_PARDINI: "/grupo-pardini",
+    SUB_MENU_PARDINI: "/grupo-pardini",
+    OUR_COMPANIES_PARDINI: "/sub-menu",
+    OUR_COMPANIES_PUBLICATION: "/detalhes",
+    ABOUT_US: "/sobre-nos",
+    SUB_ABOUT_US: "/sobre-nos",
+    HOLERITE: "/holerite"
+  }
+}))();

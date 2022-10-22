@@ -7,7 +7,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import Flex from "../../core/Grid/Flex";
-// import Menu from "../../presentation/Menu/Menu";
+import Menu from "../../presentation/Menu/Menu";
 // import Search from "../../components/presentation/Search";
 // import HeadProfile from "components/presentation/HeadProfile";
 import { useIntl } from "react-intl";
@@ -74,10 +74,10 @@ const Portal = ({
   return (
     <S.GeneralContainer>
       <S.Template>
-        {/* <Menu
-          show={(showMenu) => setShow(showMenu)}
-          search={(showSearch) => setSearchShow(showSearch)}
-        /> */}
+        <Menu
+          show={showMenu => setShow(showMenu)}
+          search={showSearch => setSearchShow(showSearch)}
+        />
         {/* {contextSearch?.contextAction?.length > 0 && (
           <Search contextSearch={contextSearch} />
         )} */}

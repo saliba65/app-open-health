@@ -68,7 +68,11 @@ export const MainContent = styled("section")(
   ({ sidebarContext }) =>
     !sidebarContext &&
     css({
-      gridColumn: "2 / 4"
+      gridColumn: "2 / 4",
+
+      "@media (max-width: 768px)": {
+        gridColumn: "1 / 4"
+      }
     }),
   ({ show }) =>
     show
