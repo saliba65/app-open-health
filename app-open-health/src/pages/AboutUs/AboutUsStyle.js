@@ -16,15 +16,10 @@ export const GeneralContainer = styled(Flex)(
         textDecoration: "none"
       }
     },
-    "@media (max-width: 342px)": {
-      paddingLeft: "80px"
-    },
 
-    "@media (min-width: 366px) and (max-width: 386px)": {
-      paddingLeft: "40px"
-    },
-    "@media (min-width: 386px) and (max-width: 490px)": {
-      paddingLeft: "60px"
+    "@media (max-width: 490px)": {
+      paddingLeft: "0px",
+      padding: "20px"
     }
   })
 );
@@ -40,6 +35,7 @@ export const ImgContainer = styled("img")(
   css({
     maxWidth: "400px",
     marginBottom: "40px",
+
     "@media (max-width: 680px)": {
       maxWidth: "100%"
     }
