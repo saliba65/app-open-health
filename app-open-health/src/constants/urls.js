@@ -153,7 +153,7 @@ export const urlsFunction = (() => ({
     },
     CALENDAR: {
       id: 2,
-      patch: "/calendario",
+      patch: "/nossos-parceiros",
       nameIcon: "EventsIcons",
       showMenu: true,
       name: "calendar"
@@ -185,7 +185,7 @@ export const urlsFunction = (() => ({
     TEAM: "/time",
     BIRTHDAYS: "/aniversarios",
     BIRTHDAYS_TODAY: "/aniversariantes",
-    CALENDAR: "/calendario",
+    CALENDAR: "/nossos-parceiros",
     PROFILE: "/perfil",
     EDIT_PROFILE: "/editar-perfil",
     ACADEMY: "/academy",

@@ -27,7 +27,7 @@ export const style = {
     nameStore: "openHealth Store",
     nameAcademy: localStorage.getItem("nameAcademy") || "openHealth Academy",
     nameTeam: localStorage.getItem("nameTeam") || "Time",
-    nameCalendar: localStorage.getItem("nameCalendar") || "Calendário",
+    nameCalendar: localStorage.getItem("nameCalendar") || "Nossos Parceiros",
     nameTools: localStorage.getItem("nameTools") || "Ferramentas"
   },
 
