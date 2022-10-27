@@ -9,7 +9,7 @@ import { style } from "../../../style";
 
 import logoMenu from "../../../assets/img/logoMenu.png";
 import MuralIcons from "../../../assets/icons/muralIcons.svg";
-import EventsIcons from "../../../assets/icons/eventsIcons.svg";
+import EventsIcons from "../../../assets/icons/handshake.svg";
 import ArquivesIcons from "../../../assets/icons/arquivesIcons.svg";
 import ConfigurationsIcons from "../../../assets/icons/configurationsIcons.svg";
 import SunIcons from "../../../assets/icons/sunIcon.svg";
