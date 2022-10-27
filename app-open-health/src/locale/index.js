@@ -28,7 +28,7 @@ export default {
       academy: style.names.nameAcademy,
       store: style.names.nameStore,
       squad: style.names.nameTeam,
-      arquives: "Arquivos",
+      arquives: "Exames",
       settings: "Configurações",
       apps: style.names.nameTools,
       gallery: "Galeria",

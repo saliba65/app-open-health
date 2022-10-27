@@ -148,7 +148,7 @@ export const Score = styled("span")(
   css({
     fontFamily: "heading",
     fontSize: 2,
-    color: "yellow",
+    color: "#501f99",
     fontWeight: 500,
     marginTop: "2px",
 
