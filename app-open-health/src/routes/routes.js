@@ -5,6 +5,7 @@ import Login from "../pages/Login/Login";
 import Home from "../pages/Home/Home";
 import AboutUs from "../pages/AboutUs/AboutUs";
 import OurPartners from "../pages/OurPartners/OurPartners";
+import Exams from "../pages/Exams/Exams";
 import Configurations from "../pages/Configurations/Configurations";
 import RoutesPrivate from "./Private/private";
 
@@ -16,6 +17,7 @@ const Routes = () =>
         <RoutesPrivate exact path="/" component={Home} />
         <RoutesPrivate exact path="/sobre-nos" component={AboutUs} />
         <RoutesPrivate exact path="/nossos-parceiros" component={OurPartners} />
+        <RoutesPrivate exact path="/exames" component={Exams} />
         <RoutesPrivate exact path="/configuracoes" component={Configurations} />
       </Switch>
     </Suspense>
