@@ -159,6 +159,27 @@ export const UserName = styled("h3")(
     "-webkit-line-clamp": "1",
     "-webkit-box-orient": "vertical",
     fontFamily: `${theme.fonts.heading}`,
+    fontWeight: "normal",
+    "@media (max-width: 1024px)": {
+      fontSize: "17px",
+      marginBottom: "5px"
+    }
+  })
+);
+
+export const UserMessage = styled("span")(
+  css({
+    fontSize: 1,
+    marginBottom: "2px",
+    color: "white",
+    opacity: "0.75",
+    overflow: "hidden",
+    display: "-webkit-box",
+    textOverflow: "ellipsis",
+    "-webkit-line-clamp": "1",
+    "-webkit-box-orient": "vertical",
+    fontFamily: `${theme.fonts.heading}`,
+    fontWeight: "normal",
     "@media (max-width: 1024px)": {
       fontSize: "17px",
       marginBottom: "5px"

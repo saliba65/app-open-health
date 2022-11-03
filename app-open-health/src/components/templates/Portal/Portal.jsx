@@ -9,7 +9,7 @@ import PropTypes from "prop-types";
 import Flex from "../../core/Grid/Flex";
 import Menu from "../../presentation/Menu/Menu";
 // import Search from "../../components/presentation/Search";
-// import HeadProfile from "components/presentation/HeadProfile";
+import HeadProfile from "../../presentation/HeadProfile/HeadProfile";
 import { useIntl } from "react-intl";
 import { useLocation } from "react-router-dom";
 import { style } from "../../../style";
@@ -81,7 +81,7 @@ const Portal = ({
         {/* {contextSearch?.contextAction?.length > 0 && (
           <Search contextSearch={contextSearch} />
         )} */}
-        {/* <HeadProfile /> */}
+        <HeadProfile />
         <S.MainContent
           show={show}
           ref={ref => setRef && setRef(ref)}
