@@ -19,7 +19,7 @@ const storeRedeemMessage = () => {
 export default {
   "pt-BR": {
     menu: {
-      mural: "Mural",
+      mural: "Dashboard Exames",
       groupPardini: "Grupo Pardini",
       aboutUs: "Sobre Nós",
       favorite: "Favoritos",

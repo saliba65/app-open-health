@@ -41,7 +41,8 @@ export const BoxConfig = styled(Flex)(
     "@media(min-width: 765px)": {
       maxWidth: "480px"
     }
-  })
+  }),
+  ({ isDashboard }) => isDashboard && css({ marginRight: "25px" })
 );
 
 export const AvatarContainer = styled("div")(
@@ -135,12 +136,12 @@ export const LinkPassword = styled("a")(
 
 export const TextLink = styled("h3")(
   css({
-    m: 0,
     fontSize: 2,
     lineHeight: "24px",
     color: `${theme.colors.textConfig}`,
     fontFamily: `${theme.fonts.textLight}`
-  })
+  }),
+  ({ isDashboard }) => isDashboard && css({ marginRight: "20px" })
 );
 
 export const TokenText = styled(TextLink)(

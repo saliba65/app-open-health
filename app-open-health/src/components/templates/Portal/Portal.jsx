@@ -57,12 +57,12 @@ const Portal = ({
     [location, scrollRef]
   );
 
-  const handleScroll = e => {
-    if (location.pathname === "/") {
-      setScrollValue(e.target.scrollTop);
-      sessionStorage.setItem("muralScroll", e.target.scrollTop);
-    }
-  };
+  // const handleScroll = e => {
+  //   if (location.pathname === "/") {
+  //     setScrollValue(e.target.scrollTop);
+  //     sessionStorage.setItem("muralScroll", e.target.scrollTop);
+  //   }
+  // };
 
   const scrollToTop = () => {
     scrollRef.scroll({
@@ -86,7 +86,6 @@ const Portal = ({
           show={show}
           ref={ref => setRef && setRef(ref)}
           sidebarContext={sidebarContext}
-          onScroll={handleScroll}
         >
           <Flex flexDirection="column">
             <S.FlexComponentPortal>
