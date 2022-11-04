@@ -96,9 +96,10 @@ export const GoProfileLink = styled(Link)(
     border: "none",
     cursor: "pointer",
     backgroundColor: "transparent",
+    color: "secondaryColor",
     ":hover": {
       textDecoration: "underline",
-      color: "secondaryColor"
+      color: "primaryColor"
     }
   })
 );
@@ -110,7 +111,10 @@ export const GoProfile = styled("h4")(
     fontFamily: "heading",
     fontWeight: "300",
     lineHeight: "24px",
-    marginBottom: 0
+    marginBottom: 0,
+    ":hover": {
+      color: "primaryColor"
+    }
   })
 );
 
