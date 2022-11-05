@@ -19,11 +19,11 @@ import {
 } from "recharts";
 
 const Home = () => {
-  const [glicemi, setGlicemi] = useState(false);
-  const [hemoglob, setHemoglob] = useState(false);
+  const [glicemi, setGlicemi] = useState(true);
+  const [hemoglob, setHemoglob] = useState(true);
   const [tsh, setTsh] = useState(false);
   const [t4, setT4] = useState(false);
-  const [triglicerid, setTriglicerid] = useState(false);
+  const [triglicerid, setTriglicerid] = useState(true);
   const [colesterol, setColesterol] = useState(false);
 
   const boxConfigLink = (hrefUrl, hrefTarget, msgText) =>
