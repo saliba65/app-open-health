@@ -170,7 +170,7 @@ export const Score = styled("span")(
   })
 );
 
-export const Justification = styled("p")(
+export const Justification = styled("a")(
   css({
     fontFamily: "text",
     fontSize: 2,

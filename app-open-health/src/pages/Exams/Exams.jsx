@@ -25,7 +25,7 @@ import {
 const Exams = () => {
   const [isDesktop, setDesktop] = useState(window.innerWidth > 1024);
 
-  const renderHistoryItem = (item, i) => {
+  const renderHistoryItem = (title, date, status, message, link, i) => {
     return (
       <HistoryItem
         onClick={() =>
@@ -40,26 +40,30 @@ const Exams = () => {
         <Flex flexDirection="column" flex="1 0 0">
           <Flex>
             <Title>
-              {"Hemograma "}
+              {title}
             </Title>
             {isDesktop
               ? <Score>
-                  {"Disponível"}
+                  {status}
                 </Score>
               : <RegisteredAt>
-                  {"27/10/2022"}
+                  {date}
                 </RegisteredAt>}
             <ArrowLeftIcon className="collapse-trigger" />
           </Flex>
           {!isDesktop
             ? <Score>
-                {"Disponível"}
+                {status}
               </Score>
             : <RegisteredAt>
-                {"27/10/2022"}
+                {date}
               </RegisteredAt>}
-          <Justification className="collapse-element">
-            {"Clique aqui para visualizar o laudo"}
+          <Justification
+            className="collapse-element"
+            href={link}
+            target="_blank"
+          >
+            {message}
           </Justification>
         </Flex>
       </HistoryItem>
@@ -86,13 +90,78 @@ const Exams = () => {
       </Header>
       <ContainerHistory>
         <History>
-          {renderHistoryItem("", 1)}
-          {renderHistoryItem("", 2)}
-          {renderHistoryItem("", 3)}
-          {renderHistoryItem("", 4)}
-          {renderHistoryItem("", 5)}
-          {renderHistoryItem("", 6)}
-          {renderHistoryItem("", 7)}
+          {renderHistoryItem(
+            "Sódio e potássio",
+            "12/11/2022",
+            "Em processamento",
+            "Em breve seu exame ficará disponível",
+            "",
+            1
+          )}
+          {renderHistoryItem(
+            "Hemoglobina",
+            "05/11/2022",
+            "Disponível",
+            "Clique aqui para visualizar o laudo",
+            "https://drive.google.com/file/d/1_rCuHiHPyX-jEhHFJCHq-bGz08-1Dvd-/view?usp=sharing",
+            2
+          )}
+          {renderHistoryItem(
+            "Glicemia",
+            "22/10/2022",
+            "Disponível",
+            "Clique aqui para visualizar o laudo",
+            "https://drive.google.com/file/d/1_rCuHiHPyX-jEhHFJCHq-bGz08-1Dvd-/view?usp=sharing",
+            3
+          )}
+          {renderHistoryItem(
+            "Triglicérides",
+            "12/10/2022",
+            "Disponível",
+            "Clique aqui para visualizar o laudo",
+            "https://drive.google.com/file/d/1_rCuHiHPyX-jEhHFJCHq-bGz08-1Dvd-/view?usp=sharing",
+            4
+          )}
+          {renderHistoryItem(
+            "Colesterol_LDL",
+            "03/10/2022",
+            "Disponível",
+            "Clique aqui para visualizar o laudo",
+            "https://drive.google.com/file/d/1_rCuHiHPyX-jEhHFJCHq-bGz08-1Dvd-/view?usp=sharing",
+            5
+          )}
+          {renderHistoryItem(
+            "TSH",
+            "15/08/2022",
+            "Disponível",
+            "Clique aqui para visualizar o laudo",
+            "https://drive.google.com/file/d/1_rCuHiHPyX-jEhHFJCHq-bGz08-1Dvd-/view?usp=sharing",
+            6
+          )}
+          {renderHistoryItem(
+            "T4",
+            "15/08/2022",
+            "Disponível",
+            "Clique aqui para visualizar o laudo",
+            "https://drive.google.com/file/d/1_rCuHiHPyX-jEhHFJCHq-bGz08-1Dvd-/view?usp=sharing",
+            7
+          )}
+          {renderHistoryItem(
+            "Transaminases ",
+            "10/05/2022",
+            "Disponível",
+            "Clique aqui para visualizar o laudo",
+            "https://drive.google.com/file/d/1_rCuHiHPyX-jEhHFJCHq-bGz08-1Dvd-/view?usp=sharing",
+            8
+          )}
+          {renderHistoryItem(
+            "Creatinina ",
+            "11/02/2022",
+            "Disponível",
+            "Clique aqui para visualizar o laudo",
+            "https://drive.google.com/file/d/1_rCuHiHPyX-jEhHFJCHq-bGz08-1Dvd-/view?usp=sharing",
+            9
+          )}
         </History>
       </ContainerHistory>
     </Portal>
