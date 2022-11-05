@@ -50,7 +50,7 @@ const Configurations = () => {
               <S.TextContainer>
                 <S.UserName>Lucas Saliba</S.UserName>
                 <S.GoProfileLink
-                  to={`${urls.ROUTES.PROFILE}/${idUser}`}
+                  to={`${urls.ROUTES.MURAL}`}
                   key={idUser}
                 >
                   <S.GoProfile>
@@ -79,18 +79,18 @@ const Configurations = () => {
             </Flex>
           </S.BoxConfig>
           {boxConfigLink(
-            `${urls.ROUTES.CONFIGURATIONS}/como-baixar-o-app`,
+            `${urls.ROUTES.MURAL}`,
             "_self",
             "Tutorial",
           )}
           {boxConfigLink(
-            url,
+             `${urls.ROUTES.MURAL}`,
             "_blank",
             intl.messages["settings.textPage.termsAndConditions"],
           )}
           {style.variables.hasPrivacyPolicies &&
             boxConfigLink(
-              urlPrivacyPolicies,
+              `${urls.ROUTES.MURAL}`,
               "_blank",
               intl.messages["settings.textPage.privacyPolicy"],
             )}

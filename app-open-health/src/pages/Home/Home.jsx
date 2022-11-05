@@ -269,39 +269,39 @@ const Home = () => {
             <Legend />
           </LineChart>
         </ResponsiveContainer>
-        {/* <H.Subtitle>Saiba mais sobre os exames analisados:</H.Subtitle>
+        <H.Subtitle>Saiba mais sobre os exames analisados:</H.Subtitle>
         <H.Switches>
           {boxConfigLink(
-            `https://www.google.com/search?q=glicemia+&client=opera-gx&hs=2Op&sxsrf=ALiCzsayEw4DGlD1VnKb6xfze7SHR26pNA%3A1667524684561&ei=TGhkY5bqIfnZ1sQP1aCeqAQ&ved=0ahUKEwiWwOjDrZP7AhX5rJUCHVWQB0UQ4dUDCA4&uact=5&oq=glicemia+&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzIICAAQgAQQsQMyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBwgAEIAEEAoyBQgAEIAEOgoIABBHENYEELADSgQIQRgASgQIRhgAULkEWPYMYNwNaAJwAXgAgAF7iAGvB5IBAzAuOJgBAKABAcgBCMABAQ&sclient=gws-wiz-serp`,
+            `https://pt.wikipedia.org/wiki/Glicemia`,
             "_blank",
             "Glicemia"
           )}
           {boxConfigLink(
-            `https://www.google.com.br/search?q=Hemoglobina&sxsrf=ALiCzsZfrL313vc4QcBXo4O7ZOb4htHVgA%3A1667522896255&ei=UGFkY5WPD4PR1sQPs8eo4AQ&ved=0ahUKEwiV94rvppP7AhWDqJUCHbMjCkwQ4dUDCA4&uact=5&oq=Hemoglobina&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzIECCMQJzIHCAAQsQMQQzIICAAQgAQQsQMyBAgAEEMyBAgAEEMyCAgAEIAEELEDMgcIABCxAxBDMgQIABBDMgcIABCxAxBDSgQIQRgASgQIRhgAUABYAGDQBWgAcAF4AIABgAKIAYACkgEDMi0xmAEAoAECoAEBwAEB&sclient=gws-wiz-serp`,
+            `https://pt.wikipedia.org/wiki/Hemoglobina`,
             "_blank",
             "Hemoglobina"
           )}
           {boxConfigLink(
-            `https://www.google.com.br/search?q=Triglicérides&sxsrf=ALiCzsZeVCMpIOuCt6bBt99y0hr0-WEJqw%3A1667524767204&ei=n2hkY_yNDOnF5OUPn7WssA0&ved=0ahUKEwi82ZzrrZP7AhXpIrkGHZ8aC9YQ4dUDCA4&uact=5&oq=Triglicérides&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzIHCAAQsQMQQzIICAAQgAQQsQMyCwgAEIAEELEDEIMBMggIABCABBCxAzIFCAAQgAQyCAgAEIAEELEDMgUIABCABDIFCAAQgAQyBQgAEIAEOgcIIxCwAxAnOgoIABBHENYEELADSgQIQRgASgQIRhgAUI8CWI8CYKIGaAJwAXgAgAF9iAF9kgEDMC4xmAEAoAECoAEByAEJwAEB&sclient=gws-wiz-serp`,
+            `https://pt.wikipedia.org/wiki/Triacilglicerol`,
             "_blank",
             "Triglicérides"
           )}
           {boxConfigLink(
-            `https://www.google.com.br/search?q=Colesterol_LDL&sxsrf=ALiCzsZr1Th5n5RO02YPPxKSIPrD8dvzaQ%3A1667524925689&ei=PWlkY47fKcCL5OUPx8GRsAE&ved=0ahUKEwjO8eW2rpP7AhXABbkGHcdgBBYQ4dUDCA4&uact=5&oq=Colesterol_LDL&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIHCCMQsAIQJzIKCAAQgAQQsQMQDTIHCAAQgAQQDTIHCAAQgAQQDTIHCAAQgAQQDTIHCAAQgAQQDTIHCAAQgAQQDTIHCAAQgAQQDTIHCAAQgAQQDTIHCAAQgAQQDToHCCMQsAMQJzoKCAAQRxDWBBCwA0oECE0YAUoECEEYAEoECEYYAFDXAVjXAWCUCGgBcAF4AIABjQGIAY0BkgEDMC4xmAEAoAECoAEByAEJwAEB&sclient=gws-wiz-serp`,
+            `https://pt.wikipedia.org/wiki/Lipoproteína_de_baixa_densidade`,
             "_blank",
             "Colesterol_LDL"
           )}
           {boxConfigLink(
-            `https://www.google.com.br/search?q=TSH&sxsrf=ALiCzsZ4OJ-UuzZXH6RN6OOqYMvTl6_RzQ%3A1667524954592&ei=WmlkY8DhI9mL5OUP-M2ggAk&ved=0ahUKEwjA9snErpP7AhXZBbkGHfgmCJAQ4dUDCA4&uact=5&oq=TSH&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzIECCMQJzIICAAQgAQQsQMyCAgAEIAEELEDMggIABCABBCxAzIFCAAQgAQyCAgAEIAEELEDMggIABCABBCxAzIICAAQgAQQsQMyCwgAEIAEELEDEIMBSgQITRgBSgQIQRgASgQIRhgAUABYAGC7A2gAcAF4AIABsQGIAbEBkgEDMC4xmAEAoAECoAEBwAEB&sclient=gws-wiz-serp`,
+            `https://pt.wikipedia.org/wiki/Hormônio_estimulante_da_tiroide`,
             "_blank",
             "TSH"
           )}
           {boxConfigLink(
-            `https://www.google.com.br/search?q=T4+&sxsrf=ALiCzsa9Hg6BWoesBVg0eySv89UTbEKmEQ%3A1667525044287&ei=tGlkY--OEYbN1sQPgreYmA4&ved=0ahUKEwjvuKzvrpP7AhWGppUCHYIbBuMQ4dUDCA4&uact=5&oq=T4+&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzIHCAAQsQMQQzIECAAQQzIFCAAQgAQyCAgAEIAEELEDMgsIABCABBCxAxCDATIICAAQgAQQsQMyCggAELEDEIMBEEMyCAgAEIAEELEDMgQIABBDOgcIIxCwAxAnOgoIABBHENYEELADSgQIQRgASgQIRhgAUJQJWO8NYNIPaAJwAXgAgAGKAYgBhgOSAQMwLjOYAQCgAQHIAQnAAQE&sclient=gws-wiz-serp`,
+            `https://pt.wikipedia.org/wiki/Tiroxina`,
             "_blank",
             "T4"
           )}
-        </H.Switches> */}
+        </H.Switches>
       </H.Container>
     </Portal>
   );
