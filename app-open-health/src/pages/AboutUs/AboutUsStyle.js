@@ -26,8 +26,12 @@ export const GeneralContainer = styled(Flex)(
 
 export const TextContent = styled("div")(
   css({
-    maxWidth: "600px",
-    marginBottom: "40px"
+    maxWidth: "800px",
+    marginBottom: "40px",
+
+    h3: {
+      color: "#2f313d;"
+    }
   })
 );
 
