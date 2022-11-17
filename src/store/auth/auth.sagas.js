@@ -7,7 +7,7 @@ export function* signIn({ payload, type }) {
   try {
     if (
       payload.email === "teste@openhealth.com.br" &&
-      payload.password === "tiosukita"
+      payload.password === "pucminas"
     ) {
       yield call(setAccessToken, {
         accessToken: "nqp1B3tdgwwZHT2A7byf",
